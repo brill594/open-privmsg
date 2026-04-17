@@ -1,0 +1,37 @@
+:root {
+  color-scheme: light;
+  --page-ink: #f4dde8;
+  --page-base: #09070b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  color: var(--page-ink);
+  font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(177, 67, 117, 0.20), transparent 22rem),
+    radial-gradient(circle at 88% 10%, rgba(123, 69, 161, 0.14), transparent 18rem),
+    radial-gradient(circle at 50% 100%, rgba(190, 77, 122, 0.12), transparent 24rem),
+    linear-gradient(180deg, #070609 0%, #0d0a11 48%, #120d15 100%);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}

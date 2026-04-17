@@ -1,0 +1,31 @@
+{
+  "name": "privmsg",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.22.2"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:worker": "wrangler dev",
+    "build": "node scripts/build-manifest.mjs && vite build",
+    "preview:local": "node scripts/preview-local.mjs",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "deploy": "npm run build && wrangler deploy",
+    "test": "node --test",
+    "build:manifest": "node scripts/build-manifest.mjs",
+    "ci:verify": "npm test && npm run build",
+    "github:secrets:check": "node scripts/github-secrets.mjs check",
+    "github:secrets:sync": "node scripts/github-secrets.mjs sync"
+  },
+  "dependencies": {
+    "vue": "3.5.32"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "6.0.6",
+    "vite": "8.0.8",
+    "wrangler": "4.83.0"
+  },
+  "packageManager": "npm@10.9.7"
+}

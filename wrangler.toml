@@ -1,0 +1,44 @@
+name = "privmsg"
+main = "src/worker.js"
+compatibility_date = "2026-04-17"
+
+[observability]
+enabled = true
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "privmsg"
+database_id = "replace-with-d1-id"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "privmsg-payloads"
+preview_bucket_name = "privmsg-payloads-preview"
+
+[env.production]
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "privmsg"
+database_id = "replace-with-d1-id"
+
+[[env.production.r2_buckets]]
+binding = "BUCKET"
+bucket_name = "privmsg-payloads"
+preview_bucket_name = "privmsg-payloads-preview"
+
+[env.staging]
+
+[[env.staging.d1_databases]]
+binding = "DB"
+database_name = "privmsg-staging"
+database_id = "replace-with-staging-d1-id"
+
+[[env.staging.r2_buckets]]
+binding = "BUCKET"
+bucket_name = "privmsg-staging-payloads"
+preview_bucket_name = "privmsg-staging-payloads-preview"
